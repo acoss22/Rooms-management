@@ -2,3 +2,7 @@ body{
 
     color: black;
 }
+p {
+    font-family: "Roboto";
+    font-size: 18px;
+  }

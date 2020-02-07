@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent} from './warning-alert/warning-alert.component';
+import { HeaderComponent} from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SuccessAlertComponent, 
-    WarningAlertComponent
- 
+    WarningAlertComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { WarningAlertComponent} from './warning-alert/warning-alert.component';
 import { HeaderComponent} from './header/header.component';
+import { BuildingComponent } from './building/building/building.component';
+import { RoomComponent } from './room/room.component';
+import { RoomListComponent } from './room-list/room-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HeaderComponent} from './header/header.component';
     LoginComponent,
     SuccessAlertComponent, 
     WarningAlertComponent,
-    HeaderComponent
+    HeaderComponent,
+    BuildingComponent,
+    RoomComponent,
+    RoomListComponent
   ],
   imports: [
     BrowserModule,

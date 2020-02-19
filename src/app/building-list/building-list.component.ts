@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Building } from './building.model';
+import { Building } from '../../shared/building.model';
 
 @Component({
     selector: 'app-building-list',
@@ -7,9 +7,11 @@ import { Building } from './building.model';
  
 })
 
-export class NameComponent implements OnInit {
+export class BuildingListComponent implements OnInit {
   buildings : Building[] = [
-      new Building('BlockA', 'BlockA', 'blockA.jpg')
+      new Building('BlockA', 'BlockA', 'blockA.jpg'),
+      new Building('BlockB', 'BlockB', 'blockB.jpg'),
+      new Building('BlockC', 'BlockC', 'blockC.jpg')
   ];
 
     constructor() { }

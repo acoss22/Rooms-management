@@ -10,6 +10,7 @@ import { HeaderComponent} from './header/header.component';
 import { BuildingComponent } from './building/building.component';
 import { RoomComponent } from './room/room.component';
 import { RoomListComponent } from './room-list/room-list.component';
+import { BuildingDetailComponent } from './building-detail/building-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RoomListComponent } from './room-list/room-list.component';
     HeaderComponent,
     BuildingComponent,
     RoomComponent,
-    RoomListComponent
+    RoomListComponent,
+    BuildingDetailComponent
   ],
   imports: [
     BrowserModule,

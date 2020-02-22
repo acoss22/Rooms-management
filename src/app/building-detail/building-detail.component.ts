@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuildingDetailComponent implements OnInit {
 
-  constructor() { }
+
+  constructor() { 
+    let aux= true;
+  }
 
   ngOnInit() {
   }

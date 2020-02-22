@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    let banana = "";
+  }
 
   ngOnInit() {
   }

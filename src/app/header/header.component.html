@@ -1,4 +1,31 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">
+                Recipe book
+            </a>
+        </div>
 
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li> <a href="#" (click)="onSelect('recipe')">
+                        Recipes
+                    </a></li>
+                <li><a href="#" (click)="onSelect('shopping-list')">
+                        Shopping List>
+                    </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-collapse">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toogle" role="button">
+                        Manage <span class="caret"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+</nav>
+
+<!-- 
 <div class="container">
     <div class="header">
         <div class="header-left">
@@ -7,14 +34,10 @@
 
                 <!-- <input class="pt-4" type="text" [(ngModel)]="name"> -->
 
-                <p class="pt-4">Welcome to {{name}}</p>
-
-
-
-          
-                 </div>
-            </div>
-        </div>
-       
-    </div>
+<!-- <p class="pt-4">Welcome to {{name}}</p>
 </div>
+</div>
+</div>
+
+</div>
+</div> -->

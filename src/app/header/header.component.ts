@@ -13,6 +13,7 @@ export class HeaderComponent {
     name = 'Rooms Management';
     @Output() featureSelected = new EventEmitter<string>();
 
+    //select page
 
     onSelect(feature: string) {
         this.featureSelected.emit(feature);

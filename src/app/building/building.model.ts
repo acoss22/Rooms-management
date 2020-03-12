@@ -1,6 +1,6 @@
 
 
-export class Room {
+export class Building {
     constructor(public name: string, public amount: number, public imagePath?: string) {
       this.name = name;
       this.amount=amount;

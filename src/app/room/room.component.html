@@ -1,1 +1,15 @@
-<p>room works!</p>
+<div class="row">
+    <div class="col-md-5">
+      <app-room-list
+        (roomWasSelected)="selectedRoom = $event"></app-room-list>
+    </div>
+    <div class="col-md-7">
+      <app-room-detail
+        *ngIf="selectedRoom; else infoText"
+        [room]="selectedRoom"></app-room-detail>
+      <ng-template #infoText>
+        <p>Please select a Room!</p>
+      </ng-template>
+    </div>
+  </div>
+  

@@ -14,6 +14,8 @@ import { BuildingDetailComponent } from './building-detail/building-detail.compo
 import { BuildingListComponent } from './building-list/building-list.component';
 import { BuildingEditComponent } from './building-list/building.edit.component';
 import { RoomItemComponent } from './room-list/room-item/room-item.component';
+import { RoomDetailComponent } from './room-detail/room-detail.component';
+import { RoomEditComponent } from './room-list/room-item/room-edit.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,17 @@ import { RoomItemComponent } from './room-list/room-item/room-item.component';
     SuccessAlertComponent, 
     WarningAlertComponent,
     HeaderComponent,
+    //buildings
     BuildingComponent,
-    RoomComponent,
-    RoomListComponent,
     BuildingDetailComponent,
     BuildingListComponent,
     BuildingEditComponent,
-    RoomItemComponent
+    //rooms
+    RoomItemComponent, 
+    RoomDetailComponent, 
+    RoomEditComponent,
+    RoomComponent,
+    RoomListComponent
   ],
   imports: [
     BrowserModule,

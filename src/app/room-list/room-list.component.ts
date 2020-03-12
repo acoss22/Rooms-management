@@ -12,6 +12,7 @@ export class RoomListComponent implements OnInit {
     new Room('Apples', 5),
     new Room('Tomatoes', 10),
   ];
+  
   constructor() { }
 
   ngOnInit() {

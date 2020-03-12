@@ -9,8 +9,8 @@ import { Room} from '../../shared/room.model';
 export class RoomListComponent implements OnInit {
 
   rooms: Room[] = [
-    new Room('Apples', 5),
-    new Room('Tomatoes', 10),
+    new Room('Conference Room', 5),
+    new Room('Working Room ', 10),
   ];
 
 

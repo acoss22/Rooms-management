@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Building } from '../building/building.model';
+import { Building } from '../../../src/shared/building.model';
 
 
 @Component({

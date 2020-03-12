@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Room} from './room.model';
+import { Room} from '../../shared/room.model';
  
 @Component({
   selector: 'app-room-list',
@@ -12,10 +12,17 @@ export class RoomListComponent implements OnInit {
     new Room('Apples', 5),
     new Room('Tomatoes', 10),
   ];
-  
-  constructor() { }
+
+
+
+  constructor() {  console.log(this.rooms);  }
 
   ngOnInit() {
+  
   }
 
+  onRoomAdded(room: Room) {
+
+    this.rooms.push(room);
+}
 }

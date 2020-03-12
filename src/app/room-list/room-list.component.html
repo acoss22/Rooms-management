@@ -1,16 +1,18 @@
 <div class="row">
-    <div class="col-xs-10">
-      <app-building-edit></app-building-edit>
-      <hr>
-      <ul class="list-group">
-        <a
+    <div class="col-xs-12">
+   
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+        <app-room-item
           class="list-group-item"
           style="cursor: pointer"
-          *ngFor="let ingredient of ingredients"
-        >
-          {{ ingredient.name }} ({{ ingredient.amount }})
-        </a>
-      </ul>
+          *ngFor="let roomEl of Rooms"
+          [room]="roomEl"></app-room-item>
+        
+      
     </div>
   </div>
   

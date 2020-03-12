@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient} from './ingredient.model';
+import { Room} from './room.model';
  
 @Component({
   selector: 'app-room-list',
@@ -7,9 +7,10 @@ import { Ingredient} from './ingredient.model';
   styleUrls: ['./room-list.component.css']
 })
 export class RoomListComponent implements OnInit {
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Tomatoes', 10),
+
+  rooms: Room[] = [
+    new Room('Apples', 5),
+    new Room('Tomatoes', 10),
   ];
   constructor() { }
 

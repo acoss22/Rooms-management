@@ -9,9 +9,9 @@ import { Building } from '../../shared/building.model';
 
 export class BuildingListComponent implements OnInit {
     buildings: Building[] = [
-        new Building('BlockA', 'BlockA', 'blockA.jpg'),
-        new Building('BlockB', 'BlockB', 'blockB.jpg'),
-        new Building('BlockC', 'BlockC', 'blockC.jpg')
+        new Building('BlockA', 'BlockA', 'assets/images/blockA.png'),
+        new Building('BlockB', 'BlockB', 'assets/images/blockA.png'),
+        new Building('BlockC', 'BlockC', 'assets/images/blockA.png')
     ];
 
     constructor() { }

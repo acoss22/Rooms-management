@@ -16,7 +16,7 @@ import { BuildingEditComponent } from './building-list/building.edit.component';
 import { RoomItemComponent } from './room-list/room-item/room-item.component';
 import { RoomDetailComponent } from './room-detail/room-detail.component';
 import { RoomEditComponent } from './room-list/room-item/room-edit.component';
-
+import { HttpClientModule } from '@angular/common/http'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,8 @@ import { RoomEditComponent } from './room-list/room-item/room-edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   
   ],
   providers: [],

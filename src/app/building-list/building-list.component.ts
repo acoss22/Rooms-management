@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Building } from '../../shared/building.model';
+import { BuildingService} from '../services/building.service';
 
-@Component({
+@Component({ 
     selector: 'app-building-list',
     templateUrl: 'building-list.component.html'
 
 })
 
 export class BuildingListComponent implements OnInit {
-    buildings: Building[] = [
-        new Building('BlockA', 'BlockA', 'assets/images/blockA.png'),
-        new Building('BlockB', 'BlockB', 'assets/images/blockA.png'),
-        new Building('BlockC', 'BlockC', 'assets/images/blockA.png')
-    ];
+  
+    @Output() buildingWasSelected = new EventEmitter<Building>();
+    buildings: Building[];
 
-    constructor() { }
+    constructor(private buildingService : BuildingService) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.buildings = this.buildingService.getBuildings();
+     }
 
     onBuildingAdded(building: Building) {
-        this.buildings.push(building);
+        this.buildingWasSelected.emit(building);
     }
 
 }

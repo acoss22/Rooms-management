@@ -19,9 +19,11 @@ import { RoomEditComponent } from './room-list/room-item/room-edit.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { Routes, RouterModule } from '@angular/router';
 import { ServerComponent } from './server/server.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes : Routes = [
-  { path: '', component: BuildingComponent},
+  { path: '', component: HomeComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'buildings', component: BuildingComponent},
   { path: 'rooms', component: RoomComponent},
   { path: 'servers ', component: ServerComponent}
@@ -45,7 +47,8 @@ const appRoutes : Routes = [
     RoomEditComponent,
     RoomComponent,
     RoomListComponent,
-    ServerComponent
+    ServerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

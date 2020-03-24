@@ -10,6 +10,12 @@
             <ul class="nav navbar-nav">
                 <li>
                     <!-- <a (click)="onSelect('room')" > -->
+                   <a href="/" [routerLink]="['/home' ]">Home</a>  
+
+                <!-- </a> -->
+            </li>
+                <li>
+                    <!-- <a (click)="onSelect('room')" > -->
                    <a href="/" [routerLink]="['/rooms' ]">Rooms</a>  
 
                 <!-- </a> -->
@@ -25,7 +31,7 @@
                     <a href="#" class="dropdown-toogle" role="button">
                         Manage <span class="caret"></span>
                     </a>
-                </li><router-outlet></router-outlet>
+                </li>
             </ul>
         </div>
 

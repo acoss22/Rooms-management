@@ -1,15 +1,13 @@
 <div class="row">
   <div class="col-xs-10">
-    <app-room-edit
-      (roomAdded)="onRoomAdded($event)"></app-room-edit>
-    <hr>
-    <ul class="list-group">
-      <a
-        class="list-group-item"
-        style="cursor: pointer"
-        *ngFor="let room of rooms">
-        {{room.name}} - {{room.amount}} 
-      </a>
-    </ul>
+    <div class="col-md-6">
+      <app-room-edit (roomAdded)="onRoomAdded($event)"></app-room-edit>
+      <hr>
+      <ul class="list-group">
+        <a class="list-group-item" style="cursor: pointer" *ngFor="let room of rooms">
+          {{room.name}} - {{room.amount}}
+        </a>
+      </ul>
+    </div>
   </div>
 </div>

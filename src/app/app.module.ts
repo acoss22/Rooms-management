@@ -20,13 +20,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { ServerComponent } from './server/server.component';
 import { HomeComponent } from './home/home.component';
+import { Room } from 'src/shared/room.model';
 
 const appRoutes : Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'buildings', component: BuildingComponent},
   { path: 'rooms', component: RoomComponent},
-  { path: 'servers ', component: ServerComponent}
+  { path: 'servers ', component: ServerComponent},
+  { path: 'buildings/:id', component: BuildingComponent},
+  { path: 'rooms/:id', component: RoomComponent},
+  { path: 'buildings/:id/edit', component: BuildingEditComponent}
 ];
 
 @NgModule({

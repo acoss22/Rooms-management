@@ -7,8 +7,8 @@ import { Room } from '../../shared/room.model';
 export class RoomService {
   roomsChanged = new EventEmitter<Room[]>();
   private rooms: Room[] = [
-    new Room('Meeting', 5),
-    new Room('Servers', 10),
+    new Room(1, 'Meeting', 5),
+    new Room(2, 'Servers', 10),
   ];
 
   constructor() { }

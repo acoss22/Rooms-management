@@ -1,11 +1,25 @@
 <div class="row">
+  <div class="col-md-6">
+    <p>Room with ID {{room.id}} loaded.</p> 
+    <p>Room name with Name {{room.name}} loaded.</p> 
+  </div>
+</div>
+
+<div class="row">
   <div class="col-xs-10">
     <div class="col-md-6">
       <app-room-edit (roomAdded)="onRoomAdded($event)"></app-room-edit>
       <hr>
       <ul class="list-group">
-        <a class="list-group-item" style="cursor: pointer" *ngFor="let room of rooms">
-          {{room.name}} - {{room.amount}}
+        <a class="list-group-item" style="cursor: pointer" 
+       [routerLink]="['/rooms, room.id']"
+       fragment="loading"
+       href="#"
+        *ngFor="let room of rooms"> 
+
+    
+
+        {{room.name}} - {{room.amount}}
         </a>
       </ul>
     </div>

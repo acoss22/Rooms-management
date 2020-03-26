@@ -26,10 +26,12 @@ const appRoutes : Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
   { path: 'buildings', component: BuildingComponent},
-  { path: 'rooms', component: RoomComponent},
+  { path: 'rooms', component: RoomComponent, children: [
+    { path: 'rooms/:id', component: RoomComponent}
+  ]},
+  { path: 'rooms/:id', component: RoomComponent},
   { path: 'servers ', component: ServerComponent},
   { path: 'buildings/:id', component: BuildingComponent},
-  { path: 'rooms/:id', component: RoomComponent},
   { path: 'buildings/:id/edit', component: BuildingEditComponent}
 ];
 

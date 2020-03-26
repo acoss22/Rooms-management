@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Room } from '../../shared/room.model';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -12,27 +12,18 @@ export class RoomComponent implements OnInit {
 
   selectedRoom: Room;
 
-  room: { id: number, name: string }
-  paramsSubscription: Subscription;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private router : Router) { }
 
   ngOnInit() {
-    this.room = {
-      id: this.route.snapshot.params['id'],
-      name: this.route.snapshot.params['name']
-    };
-    this.paramsSubscription = this.route.params.subscribe(
-      (params: Params) => {
-      this.room.id = params['id'];
-      this.room.name = params['name'];
-    });
+   
   }
     ngOnDestroy() {
-      //Called once, before the instance is destroyed.
-      //Add 'implements OnDestroy' to the class.
-      this.paramsSubscription.unsubscribe();
+     
     }
   
+    onDetail(){
+    
+    }
 
 }

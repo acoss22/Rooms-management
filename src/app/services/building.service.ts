@@ -7,8 +7,8 @@ export class BuildingService {
   selectedBuilding = new EventEmitter<Building>();
 
   private buildings: Building[] = [
-    new Building('blockA', 'desc1', 'imge'),
-    new Building('blocvvvvvvvb', 'desc1', 'imge')
+    new Building(1, 'blockA', 'desc1', 'imge'),
+    new Building(2, 'blocvvvvvvvb', 'desc1', 'imge')
   ];
 
    

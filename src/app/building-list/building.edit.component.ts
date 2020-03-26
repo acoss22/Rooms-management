@@ -5,6 +5,7 @@ import { Room } from '../../shared/room.model';
   templateUrl: './building-edit.component.html'
 })
 export class BuildingEditComponent implements OnInit {
+  @ViewChild('idInput', { static: false }) idInputRef: ElementRef;
   @ViewChild('nameInput', { static: false }) nameInputRef: ElementRef;
   @ViewChild('descriptionInput', { static: false }) descriptionInputRef: ElementRef;
   @Output()  buildingAdded = new EventEmitter<Room>();
@@ -17,8 +18,9 @@ export class BuildingEditComponent implements OnInit {
 
   onAddItem() {
     const roomName = this.nameInputRef.nativeElement.value;
+    const roomID = this.idInputRef.nativeElement.value;
     const roomDescription = this.descriptionInputRef.nativeElement.value;
-    const newBuilding = new Room(roomName, roomDescription);
+    const newBuilding = new Room(roomID, roomName, roomDescription);
     this.buildingAdded.emit(newBuilding);
   }
 

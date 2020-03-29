@@ -19,6 +19,7 @@ import { RoomEditComponent } from './room-list/room-item/room-edit.component';
 import { HttpClientModule } from '@angular/common/http'; 
 import { ServerComponent } from './server/server.component';
 import { HomeComponent } from './home/home.component';
+import { AuthService } from './auth.service';
 
 
 
@@ -51,7 +52,7 @@ import { HomeComponent } from './home/home.component';
     
   
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

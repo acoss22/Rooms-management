@@ -11,7 +11,7 @@ import { BuildingEditComponent } from './building-list/building.edit.component';
 const appRoutes : Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'buildings', component: BuildingComponent},
+  { path: 'buildings', component: BuildingComponent, pathMatch: 'full'},
   { path: 'rooms', component: RoomComponent, children: [
     { path: 'rooms/:id', component: RoomComponent}
   ]},

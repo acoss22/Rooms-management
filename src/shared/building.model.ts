@@ -5,10 +5,10 @@ export class Building {
     public imagePath: string;
 
 
-    constructor( id: number,  name: string,  desc: string, imagePath: string) {
+    constructor( id: number,  name: string,  description: string, imagePath: string) {
         this.id = id;
         this.name = name;
-        this.description = desc;
+        this.description = description;
         this.imagePath = imagePath;
     }
 }

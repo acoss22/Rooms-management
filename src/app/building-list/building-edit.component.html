@@ -1,26 +1,44 @@
-<div class="row">
-    <div class="col-xs-12">
-        <form>
-            <div class="row">
-                <div class="col-sm-5 form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control"
-                    #nameInput>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="onSubmit()" #f="ngForm">
+                <div id="building-data" ngModelGroup="ngModelGroup">
+                    <div class="form-group">
+                        <label for="buildingName"> Building Name</label>
+                        <input 
+                        type="text" 
+                        id="buildingName" 
+                        class="form-control"
+                        ngModel
+                        name="buildingName" 
+                        required
+                        #nameInput>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="buildingDescription">Description</label>
+                        <input type="string"
+                         id="description"
+                        class="form-control"
+                        name="buildingDescription"
+                        ngModel
+                        #descriptionInput>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="image">Upload Image </label>
+                        <input type="file" id="imagePath" name="imagePath">
+                    </div>
 
                 </div>
-                <div class="col-sm-12 form-group">
-                    <label for="amount">Description</label>
-                    <input type="number" id="description" class="form-control"
-                    #descriptionInput>
+                <!-- <p *ngIf="!buildingData.valid"> Building Data is invalid! </p> -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button class="btn btn-sucess" type="submit">Add</button>
+                        <button class="btn  btn-dangger" type="button">Delete</button>
+                        <button class="btn  btn-primary" type="button">Clear</button>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <button class="btn btn-sucess" type="submit">Add</button>
-                    <button class="btn  btn-dangger" type="button">Delete</button>
-                    <button class="btn  btn-primary" type="button">Clear</button>
-                </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>

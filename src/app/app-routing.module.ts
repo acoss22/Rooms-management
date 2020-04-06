@@ -7,7 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { RoomComponent } from './room/room.component';
 import { ServerComponent } from './server/server.component';
 import { BuildingEditComponent } from './building-list/building.edit.component';
-
+import { UsersComponent} from './users/users.component';
+ 
 const appRoutes : Routes = [
   { path: '', component: HomeComponent},
   { path: 'home', component: HomeComponent},
@@ -18,7 +19,8 @@ const appRoutes : Routes = [
   { path: 'rooms/:id', component: RoomComponent},
   { path: 'servers ', component: ServerComponent},
   { path: 'buildings/:id', component: BuildingComponent},
-  { path: 'buildings/:id/edit', component: BuildingEditComponent}
+  { path: 'buildings/:id/edit', component: BuildingEditComponent},
+  { path: 'users', component: UsersComponent}
 ];
 
 @NgModule({

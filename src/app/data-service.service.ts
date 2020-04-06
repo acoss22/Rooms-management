@@ -12,45 +12,46 @@ import { Http, Headers, RequestOptions, Response, ResponseContentType } from '@a
 export class DataService implements OnInit {
   loadedUsers = [];
   private REST_API_SERVER = "http://localhost:8000/api/users";
-  private REST_API_SERVER2 = "https://gorest.co.in/public-api/users?_format=json&access-token=vvGn8lzeGIHlV4HTQBcz525P0o_ryWFaclYR";
+  //private REST_API_SERVER2 = "https://gorest.co.in/public-api/users?_format=json&access-token=vvGn8lzeGIHlV4HTQBcz525P0o_ryWFaclYR";
   private options = { headers: new HttpHeaders().set('Content-Type', 'application/json') };
+  private headers = { headers: new HttpHeaders({
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Credentials': 'true'
+}) };
 
   constructor(private httpClient: HttpClient) { }
 
 
 
   public sendGetRequest(){
-    let headers = new Headers({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': 'true'
-  });
-    return this.httpClient.get(this.REST_API_SERVER, this.options);
+   
+    return this.httpClient.get(this.REST_API_SERVER, this.headers );
   }
 
-  public sendGetRequest2(){
-    let headers = new Headers({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': 'true'
-  });
-    return this.httpClient.get(this.REST_API_SERVER2, this.options);
-  }
+  // public sendGetRequest2(){
+  //   let headers = new Headers({
+  //     'Content-Type': 'application/json',
+  //     'Access-Control-Allow-Origin': '*',
+  //     'Access-Control-Allow-Credentials': 'true'
+  // });
+  //   return this.httpClient.get(this.REST_API_SERVER2, this.headers);
+  // }
 
 
 
   ngOnInit() {
     this.fetchUsers();
-    this.fetchExample();
+    // this.fetchExample();
   }
 
   onFetchUsers() {
     // Send Http request
     this.fetchUsers();
   }
-  private fetchExample(){
-    return this.httpClient.get(this.REST_API_SERVER2);
-  }
+  // private fetchExample(){
+  //   return this.httpClient.get(this.REST_API_SERVER2);
+  // }
 
   private fetchUsers() {
     return this.httpClient.get(this.REST_API_SERVER);

@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs/Observable';
 import { DataService } from '../data-service.service';
-
 
 @Component({
   selector: 'app-users',
@@ -33,18 +30,7 @@ export class UsersComponent implements OnInit {
         console.log('other error');
       }
     })
-    this.dataService.sendGetRequest2().subscribe((data: any[]) => {
-     // console.log(data);
-      this.loadedUsers = data;
-      console.log(this.loadedUsers);
-    }, (err: HttpErrorResponse) => {
-      if (err instanceof Error) {
-        console.log(err);
-        //client side error
-      } else {
-        console.log('other error');
-      }
-    })
+    
   }
 
   // onFetchUsers() {

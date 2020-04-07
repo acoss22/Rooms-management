@@ -1,0 +1,13 @@
+GETS:
+
+api
+api/users
+api/rooms
+api/buildings
+api/materials
+api/reservations
+api/anomaly
+
+/////////////////////////////
+
+

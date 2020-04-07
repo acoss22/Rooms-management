@@ -22,6 +22,9 @@ import { HomeComponent } from './home/home.component';
 import { AuthService } from './auth.service';
 import { UsersComponent } from './users/users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { DataService } from './data-service.service';
+import { UserResolverService } from './user-resolver.service';
 
 
 
@@ -45,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RoomListComponent,
     ServerComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     
   
   ],
-  providers: [AuthService],
+  providers: [AuthService, DataService, UserResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

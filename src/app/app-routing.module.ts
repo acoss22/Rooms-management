@@ -8,6 +8,8 @@ import { RoomComponent } from './room/room.component';
 import { ServerComponent } from './server/server.component';
 import { BuildingEditComponent } from './building-list/building.edit.component';
 import { UsersComponent} from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserResolverService} from '../app/user-resolver.service';
  
 const appRoutes : Routes = [
   { path: '', component: HomeComponent},
@@ -20,7 +22,10 @@ const appRoutes : Routes = [
   { path: 'servers ', component: ServerComponent},
   { path: 'buildings/:id', component: BuildingComponent},
   { path: 'buildings/:id/edit', component: BuildingEditComponent},
-  { path: 'users', component: UsersComponent}
+  { path: 'users', component: UsersComponent , children: [
+  {path: ':id' , component: UserDetailComponent, resolve: {user: UserResolverService}}
+  ]}
+
 ];
 
 @NgModule({

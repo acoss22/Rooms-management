@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { DataService } from './data-service.service';
 import { UserResolverService } from './user-resolver.service';
+import { UserCreateComponent } from './user-create/user-create.component';
 
 
 
@@ -49,7 +50,9 @@ import { UserResolverService } from './user-resolver.service';
     ServerComponent,
     HomeComponent,
     UsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCreateComponent,
+    ReactiveFormsModule
   ],
   imports: [
     BrowserModule,

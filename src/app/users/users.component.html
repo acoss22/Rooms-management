@@ -4,7 +4,7 @@
                 User List
                 <hr>
                 <ul class="list-group" *ngFor="let user of loadedUsers">
-                    <li>
+                    <li *ngIf="user.marked_as_deleted == 0">
                         {{user.full_name}} 
                         <a class="btn btn-primary" [routerLink]="['/users', user.id]"> Details </a>
                         <router-outlet></router-outlet>

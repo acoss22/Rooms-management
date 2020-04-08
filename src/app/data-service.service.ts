@@ -22,12 +22,20 @@ export class DataService implements OnInit {
     })
   };
 
-  constructor(private httpClient: HttpClient) { }
+  private user: User;
+
+  constructor(private httpClient: HttpClient) { 
+    this.user = new User();
+  }
 
   ngOnInit() {
     this.getUsersFromRequest();
   }
 
+
+  public sendPostRequest(){
+return this.httpClient.post(this.REST_API_SERVER, this.user ,this.headers);
+  }
 
   public sendGetRequest() {
     return this.httpClient.get(this.REST_API_SERVER, this.headers);

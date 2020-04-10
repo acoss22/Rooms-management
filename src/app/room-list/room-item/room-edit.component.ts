@@ -21,8 +21,8 @@ export class RoomEditComponent implements OnInit {
     onAddItem() {
       const roomID = this.idInputRef.nativeElement.value;
       const roomName = this.nameInputRef.nativeElement.value;
-      const roomAmount = this.amountInputRef.nativeElement.value;
-      const newRoom = new Room(roomID, roomName, roomAmount);
+     
+      const newRoom = new Room(roomID, roomName, 'aSS',0, 0, 'SDA', 0, 0, 'ASDAD');
       this.roomAdded.emit(newRoom);
     }
   

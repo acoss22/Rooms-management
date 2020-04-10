@@ -21,7 +21,7 @@ export class BuildingEditComponent implements OnInit {
   @ViewChild('f', { static: false }) buildingForm: NgForm;
   buildingList = [];
   generatedID: number = 1;
-  building: Building = new Building(this.generatedID, '', '', '');
+  building: Building = new Building(this.generatedID, '', '', '', false);
 
   submitted = false;
 

@@ -51,14 +51,16 @@ import { UserCreateComponent } from './user-create/user-create.component';
     HomeComponent,
     UsersComponent,
     UserDetailComponent,
-    UserCreateComponent,
-    ReactiveFormsModule
+    UserCreateComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, 
-    HttpClientModule, BrowserAnimationsModule,
+    HttpClientModule, 
+    BrowserAnimationsModule,
+    ReactiveFormsModule
     
   
   ],

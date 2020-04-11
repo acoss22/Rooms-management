@@ -18,7 +18,7 @@ export class UserDetailComponent implements OnInit {
 
  
   ngOnInit(){
-    this.user = new User();
+    this.user = new User(0,'','','','','','','',false);
      this.data.sendGetRequestbyID(this.route.snapshot.params.id).subscribe((data: any[]) => {
       console.log(data);
       this.user = data[0];

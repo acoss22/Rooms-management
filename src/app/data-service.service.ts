@@ -25,7 +25,7 @@ export class DataService implements OnInit {
   private user: User;
 
   constructor(private httpClient: HttpClient) { 
-    this.user = new User();
+    this.user = new User(0,'','','','','','','', false);
   }
 
   ngOnInit() {

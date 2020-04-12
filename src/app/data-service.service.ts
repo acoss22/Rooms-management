@@ -22,32 +22,29 @@ export class DataService implements OnInit {
     })
   };
 
-  private user: User;
+  // private user: User;
 
-  constructor(private httpClient: HttpClient) { 
-    this.user = new User(0,'','','','','','','', false);
+  constructor(private httpClient: HttpClient) {
+    // this.user = new User(0, '', '', '', '', '', '', '', false);
   }
 
   ngOnInit() {
     this.getUsersFromRequest();
   }
 
-
-  public sendPostRequest(){
-return this.httpClient.post(this.REST_API_SERVER, this.user ,this.headers);
+  public sendPostRequest(user : User) {
+    return this.httpClient.post(this.REST_API_SERVER, user, this.headers);
   }
 
   public sendGetRequest() {
     return this.httpClient.get(this.REST_API_SERVER, this.headers);
   }
 
-  public sendGetRequestbyID(id: number) : any {
+  public sendGetRequestbyID(id: number): any {
     return this.httpClient.get(this.REST_API_SERVER + '/' + id, this.headers);
 
 
   }
-
-
 
   public getUsersFromRequest() {
     this.sendGetRequest().subscribe((data: any[]) => {

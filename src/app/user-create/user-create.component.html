@@ -1,25 +1,28 @@
 <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <form>
-          <div class="form-group">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <div formGroupName="userData">
+            <div class="form-group">
     ADD NEW USER
+
+    <label for="username">Name:</label><br>
+    <input type="text" class="form-control" id="username" name="username" formControlName="fullName"><br>
+    <label for="email">email:</label><br>
+    <input type="email" class="form-control" id="useremail" name="useremail"  formControlName="email" ><br>
+    <label for="password">password:</label><br>
+    <input type="password" class="form-control" id="userpassword" name="userpassword"  formControlName="password"><br>
+    <label for="Phone">Phone number:</label><br>
+    <input type="text"  class="form-control" id="userphonenumber" name="userphonenumber" formControlName="phone_number" ><br>
+    <label for="Department">Department:</label><br>
+    <input type="text"  class="form-control" id="userdepartment" name="userdepartment" formControlName="department" ><br>
+    <label for="Role">Role :</label><br>
+    <input type="text" class="form-control" id="userrole" name="userrole"  formControlName="role"  ><br>
     <hr>
-    <label for="fname">Name:</label><br>
-    <input type="text" class="form-control" id="fname" name="fname" value=""><br>
-    <label for="lname">email:</label><br>
-    <input type="email" class="form-control" id="lname" name="lname" value=""><br>
-    <label for="lname">password:</label><br>
-    <input type="password" class="form-control" id="lname" name="lname" value=""><br>
-    <label for="lname">Phone number:</label><br>
-    <input type="text"  class="form-control" id="lname" name="lname" value=""><br>
-    <label for="lname">Department:</label><br>
-    <input type="text"  class="form-control" id="lname" name="lname" value=""><br>
-    <label for="lname">Role :</label><br>
-    <input type="text" class="form-control" id="lname" name="lname" value=""><br>
-    <hr>
-    <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+    <button type="submit" class="btn btn-primary" >Submit</button>
   </div>
+</div>
+
         </form>
       </div>
     </div>

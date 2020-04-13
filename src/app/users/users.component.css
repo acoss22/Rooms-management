@@ -1,0 +1,50 @@
+.btn-delete{
+    margin-left: 5px;
+}
+
+.userItem{
+    list-style: none;
+}
+
+.userListTop{
+list-style-type: none;
+margin: 20px 0 20px 0;
+float: right;
+
+}
+
+.userList{
+    list-style-type: none;
+}
+
+.li-user{
+display: list-item;
+height: 100%;
+width: 100%;
+position: relative;
+clear: left;
+margin-top: 15px;
+}
+
+.user-title{
+    width: 100%;
+}
+
+.addUserLink{
+    color: #fff;
+}
+
+.topList{
+    float: right;
+    position: relative;
+}
+
+.bottomList{
+    position: relative;
+    margin-top: 60px;
+    position: absolute;
+    width: 100%;
+    float: left;
+    height: 200px;
+    clear: both;
+}

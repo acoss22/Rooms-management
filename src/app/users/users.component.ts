@@ -29,6 +29,15 @@ export class UsersComponent implements OnInit {
     })
     
   }
+
+
+  deleteUser(userID){
+    console.log(userID);
+
+
+    
+  }
+
 }
 
 

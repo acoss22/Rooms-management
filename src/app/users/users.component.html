@@ -1,28 +1,31 @@
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
         <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-                User List
 
-                <ul class="nav navbar-nav">
-                    <li role="presentation" routerLinkActive="active"
+            <h4 class="user-title">User List</h4>
+
+            <div class="topList"> 
+            <ul class="nav navbar-nav userListTop">
+                <li class="userItem" role="presentation" routerLinkActive="active"
                     [routerLinkActiveOptions]="{exact :  true}">
-                        <!-- <a (click)="onSelect('room')" > -->
-                       <a href="/" [routerLink]="['/usercreate' ]">Add New User</a>  
-    
-                    <!-- </a> -->
+                    <div class="btn btn-primary">
+                        <a href="/" class="addUserLink" [routerLink]="['/usercreate' ]">Add New User</a></div>
                 </li>
-                </ul>
-
-                <hr>
-                <ul class="list-group" *ngFor="let user of loadedUsers">
-                    <li *ngIf="user.marked_as_deleted == 0">
-                        {{user.full_name}} 
+            </ul>
+        </div>
+        <div class="bottomList">
+            <ul class="list-group userList">
+                <li *ngFor="let user of loadedUsers" class="li-user">
+                    <!-- <li *ngIf="user.marked_as_deleted == 0"> -->
+                    <div *ngIf="user.marked_as_deleted == 0">{{user.full_name}}
                         <a class="btn btn-primary" [routerLink]="['/users', user.id]"> Details </a>
-                        <router-outlet></router-outlet>
-                    </li>
-                </ul>
-            </div>
-
-            
+                        <button type="button" class="btn btn-danger btn-delete" (click)="deleteUser(user.id)">Delete
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
